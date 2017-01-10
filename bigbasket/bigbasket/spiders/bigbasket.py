@@ -52,6 +52,9 @@ class linkedInSpider(scrapy.Spider):
 		links.append(url.encode('utf8'))
 	#print links
 	"""
+	if os.path.isfile('../../../media/bigbasket_rates.csv'):
+		os.remove('../../../media/bigbasket_rates.csv')
+	
 	start_urls = links#("http://www.bigbasket.com/pd/274795/lux-soap-bar-soft-touch-silk-essence-rose-water-150-gm-pouch/",)
 
 	def parse(self, response):

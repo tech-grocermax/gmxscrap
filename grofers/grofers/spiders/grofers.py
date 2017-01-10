@@ -40,6 +40,10 @@ class linkedInSpider(scrapy.Spider):
 	for ref,link in list2:
 		links.append(link)
 	print links
+
+	if os.path.isfile('../../../media/grofers_rates.csv'):
+		os.remove('../../../media/grofers_rates.csv')
+	
 	start_urls = links#["https://grofers.com/prn/brooke-bond-red-label-zip-lock-tea/prid/104234"]#["https://grofers.com/prn/parle-hide-seek-chocolate-chip-cookie/prid/11102"]
 
 	#rules = (
