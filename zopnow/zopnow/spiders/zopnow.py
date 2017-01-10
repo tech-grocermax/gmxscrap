@@ -33,6 +33,10 @@ class linkedInSpider(scrapy.Spider):
 	for ref,link in list2:
 		links.append(link)
 	print links
+
+	if os.path.isfile('../../../media/zopnow_rates.csv'):
+		os.remove('../../../media/zopnow_rates.csv')
+	
 	start_urls = links#("https://www.zopnow.com/red-bull-energy-drink-pack-of-4-nos-can-v-250-ml-p.php",)
 
 	def parse(self, response):
