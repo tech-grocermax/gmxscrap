@@ -47,7 +47,7 @@ class linkedInSpider(scrapy.Spider):
 	#)
 	
         #driver = webdriver.Firefox()
-	driver = webdriver.Chrome(executable_path="/home/sunit/Downloads/chromedriver")
+	driver = webdriver.Chrome(executable_path="../../../media/chromedriver")
 
 	def parse(self, response):
 		reload(sys)
