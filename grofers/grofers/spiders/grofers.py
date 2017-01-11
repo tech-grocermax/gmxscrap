@@ -87,7 +87,7 @@ class linkedInSpider(scrapy.Spider):
 		product_name = (''.join(prod_name)).strip().rstrip()
 		"""
 	
-		prices = self.driver.find_element_by_xpath('//div[@class="pdp-product__price"]/span').text
+		prices = self.driver.find_element_by_xpath('//div[@class="pdp-product__price"]/span[@class="pdp-product__price--new"]').text
 		#prices = WebDriverWait(self.driver, 60).until(EC.presence_of_element_located((By.XPATH, '//div[@class="pdp-product__price"]/span')))
 		price = prices#.text
 		print "Prices",price
