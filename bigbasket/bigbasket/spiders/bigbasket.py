@@ -88,7 +88,7 @@ class linkedInSpider(scrapy.Spider):
 		
 			
 		
-		prices = sel.xpath('//div[@class="uiv2-price"]/text()').extract()
+		prices = sel.xpath('//div[@class="uiv2-product-value"]/div[@class="uiv2-price"]/text()').extract()
 		
 		
 		if len(prices)>1:
